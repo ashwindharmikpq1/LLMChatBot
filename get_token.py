@@ -17,7 +17,7 @@ def set_token():
 
     # Get the access token
     access_token = response_json.get("access_token")
-    print("Access Token:", access_token)
+    # print("Access Token:", access_token)
 
     if access_token:
         # Read the current content of the .env file
