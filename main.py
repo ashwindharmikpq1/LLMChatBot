@@ -4,7 +4,7 @@ from get_token import set_token
 
 
 if __name__ == '__main__':
-    # set_token()
+    set_token()
 
     # COMPILE
     app = workflow.compile()
