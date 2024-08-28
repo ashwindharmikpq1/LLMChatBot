@@ -6,3 +6,4 @@ load_dotenv()
 
 debug_ok = os.getenv("DEBUG")
 env = os.getenv("ENV")
+access_token = os.getenv("TOKEN")

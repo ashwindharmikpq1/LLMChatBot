@@ -4,12 +4,7 @@
 import os
 import requests
 import json
-from dotenv import load_dotenv
-
-# Load environment variables from .env file
-load_dotenv()
-
-env = os.getenv("ENV")
+from manage_env_var import *
 
 
 def get_valet_bookings(phone):
@@ -34,7 +29,7 @@ def get_valet_bookings(phone):
     }
 
     # Get the token from environment variable
-    token = os.getenv("TOKEN")
+    token = access_token  # os.getenv("TOKEN")
 
     # Headers
     headers = {
@@ -70,7 +65,7 @@ def fetch_booking_info_by_id(booking_id):
     }
 
     # Get the token from environment variable
-    token = os.getenv("TOKEN")
+    token = access_token # os.getenv("TOKEN")
 
     # Headers
     headers = {
@@ -90,7 +85,6 @@ def fetch_booking_info_by_id(booking_id):
         print(f"Error: {response.status_code}")
         print(response.text)
         return None
-
 
 # if __name__ == "__main__":
 #     fetch_resp = fetch_booking_info_by_id(115898)
