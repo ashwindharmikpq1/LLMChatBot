@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request
 from construct_graph import *
+from get_token import set_token
 
 app = Flask(__name__)
 
@@ -18,6 +19,8 @@ def run_llm():
 
     # result = {'message': 'Received dictionary: {}'.format(params_dict)}
     # return jsonify(result)
+
+    set_token()
 
     pq_chatbot = workflow.compile()
 
